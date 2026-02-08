@@ -34,5 +34,7 @@ function renderGame(){
 
 function ujKartya()
 {
-    
+    let kartya = 6
+    osszeg += 6
+    kartyak.push(kartya)
 }
