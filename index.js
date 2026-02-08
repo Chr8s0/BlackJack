@@ -1,5 +1,6 @@
 let elsoKartya = 10
 let masodikKartya = 4
+let kartyak = [elsoKartya,masodikKartya]
 let osszeg = elsoKartya+masodikKartya
 let blackjack = false
 let elo = true
@@ -9,8 +10,13 @@ let sum = document.querySelector('#sum')
 
 let kartya = document.querySelector('#kartya')
 
-function startGame(){
-    kartya.textContent = `Kártyák: ${elsoKartya} ${masodikKartya}`
+function startGame()
+{
+    renderGame()
+}
+
+function renderGame(){
+    kartya.textContent = `Kártyák: ${kartyak[0]} ${kartyak[1]}`
     sum.textContent = `Összeg: ${osszeg}`
     if(osszeg <=20){
         uzenet='Szeretnél kártyát húzni?'
@@ -22,4 +28,11 @@ function startGame(){
         elo=false
     }
     message.textContent=uzenet
+}
+
+
+
+function ujKartya()
+{
+    
 }
